@@ -1,27 +1,223 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
   
-  <title><![CDATA[Windy's blog]]></title>
-  <subtitle><![CDATA[Things do not happen. Things are made to happen.]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://fengli632.github.io//"/>
-  <updated>2015-08-27T13:27:48.949Z</updated>
-  <id>http://fengli632.github.io//</id>
+  <title>JavaScript 数组Array | Windy&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.
+
+&quot;&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 数组Array">
+<meta property="og:url" content="http://fengli632.github.io/2015/08/27/JavaScript 数组Array相关笔记/index.html">
+<meta property="og:site_name" content="Windy's blog">
+<meta property="og:description" content="因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.
+
+&quot;&amp;gt;">
+<meta property="og:updated_time" content="2015-08-27T13:27:48.949Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 数组Array">
+<meta name="twitter:description" content="因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.
+
+&quot;&amp;gt;">
   
-  <author>
-    <name><![CDATA[Windy]]></name>
+    <link rel="alternative" href="/atom.xml" title="Windy&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xk9uj.com1.z0.glb.clouddn.com/15-7-9/98457641.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Windy</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Things do not happen. Things are made to happen.</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/作品">作品</a></li>
+				        
+							<li><a href="/">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/fengli632" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="/lifeng632@163.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Windy</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xk9uj.com1.z0.glb.clouddn.com/15-7-9/98457641.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Windy</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Things do not happen. Things are made to happen.</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/作品">作品</a></li>
+		        
+					<li><a href="/">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/fengli632" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="/lifeng632@163.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-JavaScript 数组Array相关笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/27/JavaScript 数组Array相关笔记/" class="article-date">
+  	<time datetime="2015-08-27T10:09:12.000Z" itemprop="datePublished">2015-08-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
     
-  </author>
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+    <h1 class="article-title" itemprop="name">
+      JavaScript 数组Array
+    </h1>
   
-  <entry>
-    <title><![CDATA[JavaScript 数组Array]]></title>
-    <link href="http://fengli632.github.io/2015/08/27/JavaScript%20%E6%95%B0%E7%BB%84Array%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/"/>
-    <id>http://fengli632.github.io/2015/08/27/JavaScript 数组Array相关笔记/</id>
-    <published>2015-08-27T10:09:12.000Z</published>
-    <updated>2015-08-27T13:27:48.949Z</updated>
-    <content type="html"><![CDATA[<blockquote>
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
 <p>因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.<br>涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.</p>
 </blockquote>
 <h2 id="<!-_more_->"><a id="more"></a></h2><h3 id="Array创建方式">Array创建方式</h3><h4 id="1-_使用Array构造函数">1. 使用Array构造函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br></pre></td></tr></table></figure>
@@ -80,129 +276,126 @@
 <p><code>shift()</code>: 移除数组中的第一项并返回该项,同时将数组的长度减1.<br><code>unshift()</code>: 在数组的前端添加任意项并返回新数组的长度.</p>
 <p><code>shift()</code>和<code>push()</code>方法组合, 可以像队列一样使用数组.在数组的末尾添加项,前端移除项.<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var colors = new Array<span class="params">()</span>;</span><br><span class="line">var count = colors.push<span class="params">(<span class="string">"red"</span>,<span class="string">"green"</span>)</span>; <span class="comment">//推入两项</span></span><br><span class="line">alert<span class="params">(count)</span>;                           <span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">count = colors.push<span class="params">(<span class="string">"blue"</span>)</span>;            <span class="comment">//推入第三项</span></span><br><span class="line">alert<span class="params">(count)</span>;                           <span class="comment">//3</span></span><br><span class="line"></span><br><span class="line">var item = colors.shift<span class="params">()</span>;              <span class="comment">//移除前端第一项并返回</span></span><br><span class="line">alert<span class="params">(item)</span>;                            <span class="comment">//red</span></span><br><span class="line">alert<span class="params">(colors.length)</span>;                   <span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
 <p><code>unshift()</code>和<code>pop()</code>方法组合,可以从相反的方向来模拟队列.即在数组的前端添加项,从数组的末尾移除项.<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var colors = new Array<span class="params">()</span>;</span><br><span class="line">var count = colors.unshift<span class="params">(<span class="string">"red"</span>,<span class="string">"green"</span>)</span>;  <span class="comment">//从前端推入两项</span></span><br><span class="line">alert<span class="params">(count)</span>;                               <span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">count = colors.unshift<span class="params">(<span class="string">"black"</span>)</span>;            <span class="comment">//从前端推入另一项</span></span><br><span class="line">alert<span class="params">(count)</span>;                               <span class="comment">//3</span></span><br><span class="line">alert<span class="params">(colors)</span>;                              <span class="comment">//black,red,green</span></span><br><span class="line"></span><br><span class="line">var item = colors.pop<span class="params">()</span>;                    <span class="comment">//移除末尾最后一项并返回</span></span><br><span class="line">alert<span class="params">(item)</span>;                                <span class="comment">//green</span></span><br><span class="line">alert<span class="params">(colors.length)</span>;                       <span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.<br>涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.</p>
-</blockquote>
-<h2 id="<!-_more_->">]]>
+
+      
+    </div>
     
-    </summary>
-    
-      <category term="JavaScript" scheme="http://fengli632.github.io/tags/JavaScript/"/>
-    
-      <category term="前端" scheme="http://fengli632.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
+  </div>
   
-  <entry>
-    <title><![CDATA[2015/07/09 mark]]></title>
-    <link href="http://fengli632.github.io/2015/07/09/2015-07-09-note/"/>
-    <id>http://fengli632.github.io/2015/07/09/2015-07-09-note/</id>
-    <published>2015-07-09T05:09:19.000Z</published>
-    <updated>2015-07-09T05:26:38.739Z</updated>
-    <content type="html"><![CDATA[<p>Things do not happen. Things are made to happen.</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Things do not happen. Things are made to happen.</p>
-]]>
-    </summary>
     
-  </entry>
+<nav id="article-nav">
   
-  <entry>
-    <title><![CDATA[使用hexo搭建博客]]></title>
-    <link href="http://fengli632.github.io/2015/07/08/my-new-post/"/>
-    <id>http://fengli632.github.io/2015/07/08/my-new-post/</id>
-    <published>2015-07-08T02:57:43.000Z</published>
-    <updated>2015-07-09T03:20:14.643Z</updated>
-    <content type="html"><![CDATA[<h2 id="hexo介绍">hexo介绍</h2><p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/tommy351/hexo" target="_blank" rel="external">@tommy351</a>。类似于jekyll、Octopress、Wordpress，我们可以用hexo创建自己的博客，托管到github或Heroku上，绑定自己的域名，用markdown写文章。</p>
-<a id="more"></a>
-<blockquote>
-<ul>
-<li>风一般的速度<br>Hexo基于Node.js，支持多进程，几百篇文章也可以秒生成。</li>
-<li>流畅的撰写<br>支持GitHub Flavored Markdown和所有Octopress的插件。</li>
-<li>扩展性<br>Hexo支持EJS、Swig和Stylus。通过插件支持Haml、Jade和Less.</li>
-</ul>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="hexo介绍">hexo介绍</h2><p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/tommy351/hexo">@tommy351</a>。类似于jekyll、Octopress、Wordpress，我们可以用hexo创建自己的博客，托管到github或Heroku上，绑定自己的域名，用markdown写文章。</p>]]>
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://fengli632.github.io/tags/hexo/"/>
-    
-      <category term="随笔" scheme="http://fengli632.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[百度前端技术学院笔记-JavaScript]]></title>
-    <link href="http://fengli632.github.io/2015/07/06/ife-js/"/>
-    <id>http://fengli632.github.io/2015/07/06/ife-js/</id>
-    <published>2015-07-06T05:09:19.000Z</published>
-    <updated>2015-07-10T14:04:20.818Z</updated>
-    <content type="html"><![CDATA[<h2 id="1-_JavaScript基础">1. JavaScript基础</h2><h3 id="1-1_了解JavaScript是什么">1.1 了解JavaScript是什么</h3><p>JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。</p>
-<a id="more"></a>
-<h4 id="组成部分">组成部分</h4><ul>
-<li>ECMAScript，描述了该语言的语法和基本对象。</li>
-<li>文档对象模型（DOM），描述处理网页内容的方法和接口。</li>
-<li>浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口。</li>
-</ul>
-<h3 id="1-2_如何在HTML页面加载JavaScript代码">1.2 如何在HTML页面加载JavaScript代码</h3><ul>
-<li><p>使用<code>&lt;script&gt;</code>标签容纳JavaScript代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">   init();</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用&lt; script src=”xxx.js”&gt;&lt; /script&gt;外链方式引入</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"js/main.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>html界面元素直接赋与一段 JavaScript 代码<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="variable">type=</span><span class="string">"button"</span> <span class="variable">name=</span><span class="string">"Button"</span> <span class="variable">value=</span><span class="string">"Button"</span> <span class="variable">onclick=</span><span class="string">"javascript：alert('测试')"</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="1-3_为什么要把&lt;_script&gt;放在&lt;_/body&gt;前面？">1.3 为什么要把&lt; script&gt;放在&lt; /body&gt;前面？</h3><ul>
-<li><p>script标签放在底部的好处：<br>虽然理论上放在哪里都是可以的，但是对于前端页面优化来讲，还是放在底部是最佳的，因为如果JS执行出现错误了，最起码页面中的元素还能加载出来，因为DOM文档是从上往下的顺序执行的。如果还不了解DOM的加载顺序，请阅读<a href="http://www.uw3c.com/jsviews/js15.html" target="_blank" rel="external">jQuery中ready与load事件的区别</a>。<br><strong>DOM文档加载的顺序:</strong></p>
-<blockquote>
-<p>(1) 解析HTML结构。<br>(2) 加载外部脚本和样式表文件。<br>(3) 解析并执行脚本代码。<br>(4) 构造HTML DOM模型。//ready<br>(5) 加载图片等外部文件。<br>(6) 页面加载完毕。//load</p>
-</blockquote>
-<p><strong>ready事件：</strong><br>ready事件在DOM结构绘制完成之后就绘执行。这样能确保就算有大量的媒体文件没加载出来，JS代码一样可以执行。<br><strong>load事件：</strong><br>load事件必须等到网页中所有内容全部加载完毕之后才被执行。如果一个网页中有大量的图片的话，则就会出现这种情况：网页文档已经呈现出来，但由于网页数据还没有完全加载完毕，导致load事件不能够即时被触发。<br><strong>区别：</strong><br>其实如果页面中要是没有图片之类的媒体文件的话ready与load是差不多的，但是页面中有文件就不一样了，所以还是推荐大家在工作中用ready。</p>
-</li>
-<li>应该放在底部的哪里：<br>许多人认为只要放在底部了，无论是“body标签闭合之前”还是在“body标签闭合之后”都是一样的，其实还是有差别的，<br>因为从HTML 2.0起放在“body标签闭合之后”就是不合标准的。之所以但是浏览器却不会报错，是因为如果在“body标签闭合之后”后再出现script或任何元素的开始标签， 都是parseerror，浏览器会忽略之前的，即视作仍旧在body内。所以实际效果和写在“body标签闭合之前”之前是没有区别的。<br>所以，只要是让浏览器做了多余的事都是不好的，虽然差别细微，但是咱们还是按照标准来，放在<strong>body标签闭合之前</strong>。</li>
-</ul>
-<h3 id="1-4_参考资料：JavaScript的性能优化：加载和执行">1.4 参考资料：<a href="http://www.ibm.com/developerworks/cn/web/1308_caiys_jsload/index.html" target="_blank" rel="external">JavaScript的性能优化：加载和执行</a></h3><h2 id="2-_JavaScript数据类型及语言基础">2. JavaScript数据类型及语言基础</h2><h3 id="2-1_任务描述">2.1 任务描述</h3><h4 id="JavaScript数据类型（七种）：">JavaScript数据类型（七种）：</h4><p>字符串、数字、布尔、数组、对象、Null、Undefined<br>参考资料：<a href="http://www.w3school.com.cn/js/js_datatypes.asp" target="_blank" rel="external">W3school JavaScript数据类型</a></p>
-<h4 id="2-1-1_判断各种数据类型的方法：">2.1.1 判断各种数据类型的方法：</h4><h5 id="数据类型判断之_typeof">数据类型判断之 <code>typeof</code></h5><p><code>typeof</code>可以解决大部分的数据类型判断，是一个一元运算，放在一个运算值之前，其返回值为一个字符串，该字符串说明运算数的类型，所以判断某个是否为String类型，可以直接 <code>if(typeof(你的值) == &quot;string&quot;){}</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="string">"string"</span>; <span class="built_in">console</span>.log(a); <span class="comment">//string</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>; <span class="built_in">console</span>.log(a); <span class="comment">//number</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="literal">false</span>; <span class="built_in">console</span>.log(a); <span class="comment">//boolean</span></span><br><span class="line"><span class="keyword">var</span> a; <span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">//undfined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="literal">null</span>; <span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">//object</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>; <span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">//object</span></span><br><span class="line"><span class="keyword">var</span> a = []; <span class="built_in">console</span>.log(a); <span class="comment">//object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="built_in">console</span>.log(<span class="keyword">typeof</span> a) <span class="comment">//function   除了可以判断数据类型还可以判断function类型</span></span><br></pre></td></tr></table></figure></p>
-<p>这样一来就很明显了，除了前四个类型外，null、对象、数组返回的都是<code>object</code>类型；对于函数类型返回的则是<code>function</code>，再比如<code>typeof(Date)</code>，<code>typeof(eval)</code>等。然后这里就可以再引申出另一个灰常热门并且解决方法已普遍存在的问题，如何判断数据是个数组类型？</p>
-<h5 id="js判断数组类型的方法">js判断数组类型的方法</h5><h6 id="方法一：_instanceof">方法一： <code>instanceof</code></h6><p><code>instance</code>，故名思义，实例，例子，所以<code>instanceof</code> 用于判断一个变量是否某个对象的实例，是一个三目运算式—-和<code>typeof</code>最实质上的区别<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a instanceof b?alert<span class="params">(<span class="string">"true"</span>)</span>:alert<span class="params">(<span class="string">"false"</span>)</span> <span class="comment">//注意b值是你想要判断的那种数据类型，不是一个字符串，比如Array</span></span><br></pre></td></tr></table></figure></p>
-<h6 id="方法二：_constructor">方法二： <code>constructor</code></h6><p>在W3C定义中的定义：<code>constructor</code> 属性返回对创建此对象的数组函数的引用就是返回对象相对应的构造函数。从定义上来说跟<code>instanceof</code>不太一致，但效果都是一样的如:<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="literal">a</span> instanceof Array)   //<span class="literal">a</span>是否Array的实例？<span class="literal">true</span> <span class="literal">or</span> <span class="literal">false</span></span><br><span class="line">(<span class="literal">a</span>.constructor == Array)  // <span class="literal">a</span>实例所对应的构造函数是否为Array? <span class="literal">true</span> <span class="literal">or</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>注意：</strong><br>使用instaceof和construcor,被判断的array必须是在当前页面声明的！比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个array，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；<br>原因：<br>1、array属于引用型数据，在传递过程中，仅仅是引用地址的传递。<br>2、每个页面的Array原生对象所引用的地址是不一样的，在子页面声明的array，所对应的构造函数，是子页面的Array对象；父页面来进行判断，使用的Array并不等于子页面的Array；切记，不然很难跟踪问题！</p>
-<h6 id="方法三：最简单Object-prototype-toString-call">方法三：最简单<code>Object.prototype.toString.call</code></h6><p>ECMA中对<code>Object.prototype.toString</code>的解释：</p>
-<blockquote>
-<p>Object.prototype.toString( )<br>1.If the this value is undefined, return “[object Undefined]”.<br>2.If the this value is null, return “[object Null]”.<br>3.Let O be the result of calling ToObject passing the this value as the argument.<br>4.Let class be the value of the [[Class]] internal property of O.<br>5.Return the String value that is the result of concatenating the three Strings “[object “, class, and “]”.</p>
-</blockquote>
-<p>即当<code>toString()</code>方法调用时: </p>
-<blockquote>
-<p>1.如果this的值为undefined,则返回”[object Undefined]”.<br>2.如果this的值为null,则返回”[object Null]”.<br>3.让O成为调用ToObject(this)的结果.<br>4.让class成为O的内部属性[[Class]]的值.<br>5.返回三个字符串”[object “, class, 以及 “]”连接后的新字符串.</p>
-</blockquote>
-<p>ECMA中对Array有如下说明：</p>
-<blockquote>
-<p>The [[Class]] property of the newly constructed object is set to “Array”.</p>
-</blockquote>
-<p>因此我们用如下方式来检测数组：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">arr</span>) </span>&#123; </span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(arr) === <span class="string">'[object Array]'</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这种方式既解决了<code>instanceof</code>存在的跨页面问题，也解决了属性检测方式所存在的问题，是一个很好的解决方案。<br>除此之外，这种解决办法也可以应用于判断<code>Date</code>,<code>Function</code>等类型的对象。<br>附:ES5可以直接使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a>来判断.<br><strong>参考资料:</strong><br>MDN对 说明:<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="external">MDN-Object.prototype.toString()</a><br>ECMA5.1说明: <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.2.4.2" target="_blank" rel="external">ECMA5.1-Object.prototype.toString() </a><br>最新的ES6对<code>Object.prototype.toString()</code>的说明有所增加:<a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tostring" target="_blank" rel="external">ES6-Object.prototype.toString()</a>.不过变化不大,有兴趣的读者可以细看.</p>
-<h5 id="js判断函数类型方法">js判断函数类型方法</h5><p>参考上面的方法,可以使用<code>Object.propotype.toString.call</code>来判断目标对象是否为函数.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断fn是否为一个函数，返回一个bool值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFunction</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.propotype.toString.call(fn) === <span class="string">"[object Function]"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>关于<code>==</code>和<code>===</code>的区别,参见 :<a href="http://fxk2006.iteye.com/blog/768260" target="_blank" rel="external">javascript ==和===的区别</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="1-_JavaScript基础">1. JavaScript基础</h2><h3 id="1-1_了解JavaScript是什么">1.1 了解JavaScript是什么</h3><p>JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。</p>]]>
-    
-    </summary>
-    
-      <category term="Javascript" scheme="http://fengli632.github.io/tags/Javascript/"/>
-    
-      <category term="前端" scheme="http://fengli632.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
+    <a href="/2015/07/09/2015-07-09-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2015/07/09 mark</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
-</feed>
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript 数组Array相关笔记" data-title="JavaScript 数组Array" data-url="http://fengli632.github.io/2015/08/27/JavaScript 数组Array相关笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Windy
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
