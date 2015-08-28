@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Things do not happen. Things are made to happen.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://fengli632.github.io//"/>
-  <updated>2015-08-28T14:52:32.339Z</updated>
+  <updated>2015-08-28T14:54:17.079Z</updated>
   <id>http://fengli632.github.io//</id>
   
   <author>
@@ -20,18 +20,19 @@
     <link href="http://fengli632.github.io/2015/08/27/JavaScript%20%E6%95%B0%E7%BB%84Array%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/"/>
     <id>http://fengli632.github.io/2015/08/27/JavaScript 数组Array相关笔记/</id>
     <published>2015-08-27T10:09:12.000Z</published>
-    <updated>2015-08-28T14:52:32.339Z</updated>
+    <updated>2015-08-28T14:54:17.079Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.<br>涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.</p>
 </blockquote>
-<h2 id="<!-_more_->"><a id="more"></a></h2><h3 id="Array创建方式">Array创建方式</h3><h4 id="1-_使用Array构造函数">1. 使用Array构造函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Array创建方式">Array创建方式</h3><h4 id="1-_使用Array构造函数">1. 使用Array构造函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br></pre></td></tr></table></figure>
 <p>若给构造函数传递数量，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
 <p>该数量会自动变成数组length属性的值。</p>
 <p>也可以像Array构造函数传递数组中应该包含的项。如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>创建一个包含<span class="number">3</span>项的数组，值分别为字符串<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span></span><br><span class="line"><span class="reserved">var</span> colors = <span class="keyword">new</span> Array(<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>);</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>注：使用Array构造函数时也可以省略<code>new</code>操作符，如下两种方式结果相同。</p>
 </blockquote>
-<!-- more -->
+<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="built_in">Array</span>(<span class="number">3</span>);		<span class="comment">//创建一个包含3项的数组</span></span><br><span class="line"><span class="keyword">var</span> colors = <span class="built_in">Array</span>(<span class="string">"red"</span>);	<span class="comment">//创建一个包含1项，即字符串"red"的数组</span></span><br></pre></td></tr></table></figure>
 <h4 id="2-_使用数组字面量表示法">2. 使用数组字面量表示法</h4><p>数组字面量由一对包含数组项的方括号表示，多个数组之间用逗号<code>,</code>隔开<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>]<span class="comment">;//创建一个包含3个字符串的数组</span></span><br><span class="line">var students = []<span class="comment">;                  //创建一个空数组</span></span><br><span class="line">var nums = [<span class="number">1</span>,<span class="number">2</span>,]<span class="comment">;                  //创建一个包3(IE:包含3项1,2,undefined的数组)或含2(其他浏览器)项的数组</span></span><br><span class="line">var options = [,,,,,]<span class="comment">;              //创建一个包含6(IE8之前)或5项(IE9+及其他浏览器)的数组</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
@@ -153,7 +154,14 @@
     <![CDATA[<blockquote>
 <p>因面试经常会问数组相关操作和方法,发现之前对数组的学习很不深入,这里特做一个总结,文章为《JavaScript高级程序设计》的讀書笔记.<br>涉及:Array类型的创建; 读取及设置; 检测方法; 转换方法; 栈方法; 队列方法; 重排序方法; 操作方法 位置方法;迭代及归并方法等,相信看完文章后你会对JS数组有个更加全面和深入的认识.</p>
 </blockquote>
-<h2 id="<!-_more_->">]]>
+<hr>
+<h3 id="Array创建方式">Array创建方式</h3><h4 id="1-_使用Array构造函数">1. 使用Array构造函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br></pre></td></tr></table></figure>
+<p>若给构造函数传递数量，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
+<p>该数量会自动变成数组length属性的值。</p>
+<p>也可以像Array构造函数传递数组中应该包含的项。如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>创建一个包含<span class="number">3</span>项的数组，值分别为字符串<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span></span><br><span class="line"><span class="reserved">var</span> colors = <span class="keyword">new</span> Array(<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注：使用Array构造函数时也可以省略<code>new</code>操作符，如下两种方式结果相同。</p>
+</blockquote>]]>
     
     </summary>
     
